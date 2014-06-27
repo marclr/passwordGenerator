@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Multipass</class>
+ <widget class="QMainWindow" name="Multipass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>465</width>
+    <height>281</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="widget">
+   <widget class="QRadioButton" name="ascii85">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>160</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Ascii85</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="base64">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>160</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Base64</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="username">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="domain">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>40</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="master_password">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>411</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText</set>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="selected_size">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>220</y>
+      <width>341</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="minimum">
+     <number>8</number>
+    </property>
+    <property name="maximum">
+     <number>40</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="username_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>16</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Username:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="domain_label">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>16</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Domain:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="masterPass_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>86</y>
+      <width>351</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Master Password:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="generatedPass_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Generated Password:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="length_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Length:</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="generated_password">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>465</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>username</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Multipass</receiver>
+   <slot>generatePassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>domain</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Multipass</receiver>
+   <slot>generatePassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>382</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_password</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Multipass</receiver>
+   <slot>generatePassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>160</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ascii85</sender>
+   <signal>clicked()</signal>
+   <receiver>Multipass</receiver>
+   <slot>generatePassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>289</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>325</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>base64</sender>
+   <signal>clicked()</signal>
+   <receiver>Multipass</receiver>
+   <slot>generatePassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>446</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selected_size</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Multipass</receiver>
+   <slot>generatePassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>generatePassword()</slot>
+ </slots>
+</ui>
